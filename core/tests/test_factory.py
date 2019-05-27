@@ -49,7 +49,7 @@ class RequestMixin:
         url = reverse('user_sighup')
         payload = {'username': username, 'password': password}
         return self.client.post(url, data=payload, fortmat='json')
-    
+
     def login(self, username: str, password: str) -> Response:
         url = reverse('user_login')
         payload = {'username': username, 'password': password}
